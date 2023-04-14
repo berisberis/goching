@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
-	hexagram := hexgen.GenerateHexagram()
-	fmt.Println(hexagram)
+	hexagrams := hexgen.GenerateHexagrams(100000)
+	mostCommonHexagram, count := hexgen.MostCommonHexagram(hexagrams)
+	fmt.Printf("Most common hexagram:\n%v\nCount: %v\n", mostCommonHexagram, count)
 }
